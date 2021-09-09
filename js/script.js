@@ -1,3 +1,5 @@
+var score = 0;
+
 function start(){
     console.log("start()");
     var refresh_button = document.getElementById("refresh");
@@ -14,10 +16,9 @@ function refresh(){
     var operators = new Array();
     var protection = 0;
     var operator = 0;
-    var score = 0;
     var create_answer = " ";
     for (var i = 0; i < number; i++){
-        numbers[i] = getRand(1,21);
+        numbers[i] = getRand(2,11);
         document.getElementById("task-box").innerHTML += numbers[i];
         console.log(numbers[i]);
 
@@ -53,59 +54,50 @@ function refresh(){
     var enter_button = document.getElementById("enter-button");
     var delete_button = document.getElementById("delete-button");
     number0.onclick = function () {
-        if (create_answer != 0){
         document.getElementById("answer-box").innerHTML += 0;
         create_answer += "0";
-        }
+        
     };
     number1.onclick = function () {
         document.getElementById("answer-box").innerHTML += 1;
         create_answer += "1";
-        console.log(create_answer);
     };
     number2.onclick = function () {
         document.getElementById("answer-box").innerHTML += 2;
         create_answer += "2";
-        console.log(create_answer);
     };
     number3.onclick = function () {
         document.getElementById("answer-box").innerHTML += 3;
         create_answer += "3";
-        console.log(create_answer);
     };
     number4.onclick = function () {
         document.getElementById("answer-box").innerHTML += 4;
         create_answer += "4";
-        console.log(create_answer);
     };
     number5.onclick = function () {
         document.getElementById("answer-box").innerHTML += 5;
         create_answer += "5";
-        console.log(create_answer);
     };
     number6.onclick = function () {
         document.getElementById("answer-box").innerHTML += 6;
         create_answer += "6";
-        console.log(create_answer);
     };
     number7.onclick = function () {
         document.getElementById("answer-box").innerHTML += 7;
         create_answer += "7";
-        console.log(create_answer);
     };  
     number8.onclick = function () {
         document.getElementById("answer-box").innerHTML += 8;
         create_answer += "8";
-        console.log(create_answer);
     };
     number9.onclick = function () {
         document.getElementById("answer-box").innerHTML += 9;
         create_answer += "9";
-        console.log(create_answer);
     };
     enter_button.onclick = function () {
         if (create_answer ==  mathOperation(numbers, operators)){
             score++;
+            console.log("Correct");
             document.getElementById("score").innerHTML = score;
         } else{
             score = 0;
