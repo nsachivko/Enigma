@@ -1,6 +1,7 @@
 var score = 0;
-
+document.getElementById("score").innerHTML = score;
 function start(){
+
     console.log("start()");
     var refresh_button = document.getElementById("refresh");
     refresh();
