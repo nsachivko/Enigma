@@ -1,106 +1,114 @@
-.to-center{
-    display: flex;
-    text-align: center;
-    flex-flow: wrap;
-    flex-direction: row;
+
+.rewie-button {
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 50px 20px;
+    padding: 10px 30px;
+    position: relative;
+    border: 2px solid #FFE400;
+    color: #FFE400;
+    transition: .4s;
+  }
+  .rewie-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: .4s;
+  }
+  .rewie-button:hover:after {
+    border-width: 10px;
+    border-color: #FFE400;
+    width: calc(80% - 10px);
+    height: calc(80% + 10px);
+  }
+
+  .app-button {
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 50px 20px;
+    padding: 10px 30px;
+    position: relative;
+    border: 2px solid #14A76C;
+    color: #14A76C;
+    transition: .4s;
+  }
+  .app-button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    border: 2px solid rgba(0, 0, 0, 0);
+    transition: .4s;
+  }
+  .app-button:hover:after {
+      border-width: 10px;
+    border-color: #14A76C;
+    width: calc(80% - 10px);
+    height: calc(80% + 10px);
+  }
+
+
+  .body-box{
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #272727 50%, #313131 50%);
+      display: flex;
+      flex-direction: row;
     justify-content: center;
-    border-radius: 50px;
-    padding:  25px 25px 25px 25px;
-    background-color: #474B4F ;
-    margin-bottom: 200px;
-    font-size: 85px;
     font-family: 'Poppins', sans-serif;
 }
 
-.score-div{
-    display: flex;
-    text-align: center;
-    flex-flow: wrap;
-    flex-direction: row;
+  .outer-div{
+    height: 120px;
+      text-align: center;
+      justify-content: center;
+      display: flex;
+      flex-direction: row;
+  }
+
+.inner-div{
+  height: 120px;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.img-box{
     justify-content: center;
-    border-radius: 50px;
-    padding:  25px 25px 25px 25px;
-    background-color: #474B4F  ;
-    margin-bottom: 50px;
-    font-size: 85px;
-    font-family: 'Poppins', sans-serif;
 }
 
-#score{
-    margin-left: 25px;
+.nikita_img{
+  width: 438px;
+  height: 558px;
+    border-radius: 10px;
 }
 
-.body-box{
-    color: white;
-    background-color: #222629   ;
-}
 
-.numpad-box{
-    margin-left: auto;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    border-radius: 50px;
-    padding:  25px 25px 25px 25px;
-    background-color: #474B4F ;
+.content {
+  height:100%;
 }
-
-#task-box{
-    margin-right: 20px;
+.outer-div .outer-div {
+  width:50%;
+  float:left;
 }
-
-.number{
-    
-    width: 150px;
-    font-family: 'Poppins', sans-serif;
-    background-color: #86C232  ;
-    border-color: white ;
-    border-width:   0px;
-    border-radius: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 100px;
-}
-
-.numpad-part-box{
-    margin-top: 15px;
-    margin-bottom: 25px;
-}
-
-.delete{
-    width: 410px;
-    font-family: 'Poppins', sans-serif;
-    background-color: #61892F;
-    border-color: white ;
-    border-width:   0px;
-    border-radius: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 100px;
-}
-
-.enter{
-    width: 410px;
-    font-family: 'Poppins', sans-serif;
-    background-color: #61892F;
-    border-color: white ;
-    border-width:   0px;
-    border-radius: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    font-size: 100px;
-}
-
-#minus{
-    width: 850px;
-    font-family: 'Poppins', sans-serif;
-    background-color: #61892F;
-    border-color: white ;
-    border-width:   0px;
-    border-radius: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-size: 100px;
+.outer-div .inner-div {
+  width:50%;
+  float:right;
 }
